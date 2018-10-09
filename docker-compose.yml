@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  jiggy:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    image: jiggy
+    expose:
+    - '22'
+    ports:
+    - '2020:22'
