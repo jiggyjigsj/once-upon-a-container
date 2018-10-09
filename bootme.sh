@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export USER=${USER:-groot}
-export PASSWORD=${PASSWORD:-letmeguess}
+export PASSWORD=${PASSWORD:-trymebruh}
 
 echo -e "$PASSWORD\n$PASSWORD\n" | adduser "$USER"
 echo -e "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/"$USER"
@@ -11,4 +11,3 @@ ssh-keygen -A
 
 # do not detach (-D), log to stderr (-e), passthrough other arguments
 exec /usr/sbin/sshd -D -e "$@"
-
